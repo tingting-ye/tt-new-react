@@ -1,11 +1,11 @@
-import React, {Component} from 'react'
 
-class Greeter extends Component{
+import React, { Component } from 'react'
+
+export default class index extends Component {
+
   render() {
     return (
-      <div>lalal</div>
-    );
+      <div>lalalal sdd</div>
+    )
   }
 }
-
-export default Greeter

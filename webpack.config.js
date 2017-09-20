@@ -21,7 +21,22 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',//在webpack的module部分的loaders里进行配置即可
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'//添加对样式表的处理
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=819200'
+      },
+      {
+        test: /\.less$/,
+        loader: 'style-loader!css-loader!less-loader',
       }
     ]
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()//热加载插件
+  ],
 }
