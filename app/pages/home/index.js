@@ -5,7 +5,7 @@ export default class index extends Component {
 
   render() {
     return (
-      <div>lalalal sdd</div>
+      <div>lalalal dsfafsdd</div>
     )
   }
 }
