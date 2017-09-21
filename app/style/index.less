@@ -1,3 +1,12 @@
-#example{background: yellow;
-  div{color: red;}
+@import './theme.less';
+
+body {.flex1;
+	#example {.flex1;
+		.header{color: white;font-size:16px;}
+		.content{.flex1;
+			.page{.flex1;
+				.page-content{.flex1;overflow: auto;}
+			}
+		}
+	}
 }

@@ -1,6 +1,15 @@
-import React from 'react';
-import {render} from 'react-dom';
-import Greeter from './pages/home/index';
-import './style/index.less'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter, Router, hashHistory, HashRouter, Route } from 'react-router-dom'
+import Home from './pages/home/index'
+import 'antd/dist/antd.css'
+import "./style/index.less"
 
-render(<Greeter />, document.getElementById('example'))
+ReactDOM.render(
+	(
+		<HashRouter history={hashHistory}>
+			<Route exact path="/" component={Home} />
+		</HashRouter>
+	),
+	document.getElementById('example')
+);
