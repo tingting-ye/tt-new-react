@@ -4,7 +4,6 @@ import { Layout, Menu, Breadcrumb, Icon, Message } from 'antd'
 const { SubMenu } = Menu
 const { Header, Content, Sider } = Layout
 import '../../config'
-// import '../css/index.less'
 
 export default class index extends Component {
   constructor(props) {
@@ -113,18 +112,10 @@ export default class index extends Component {
       <Layout >
         <Header className="header">System</Header>
         <div className="topMenu">
-          <Menu
-            theme="light"
-            mode="horizontal"
-            style={{ lineHeight: '32px' }}
-            selectedKeys={[topMenu]}
-            onClick={this.topMenuClick}
+          <Menu theme="light" mode="horizontal" style={{ lineHeight: '32px' }}
+            selectedKeys={[topMenu]} onClick={this.topMenuClick}
           >
-            {
-              navs.map((nav, index) => {
-                return <Menu.Item key={nav.url}>{nav.name}</Menu.Item>
-              })
-            }
+            { navs.map((nav, index) => { return <Menu.Item key={nav.url}>{nav.name}</Menu.Item> }) }
           </Menu>
         </div>
         <Layout>
