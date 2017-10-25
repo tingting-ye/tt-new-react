@@ -15,7 +15,7 @@ export default (() => {
           {
             id: 31,
             name: '默认',
-            url: '/carousel/default',
+            url: '/carousel$/default',
             children: [],
           },
         ],
