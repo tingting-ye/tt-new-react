@@ -1,23 +1,24 @@
 /**
  *  轮播图左右切换
  */
-import React,{Component} from 'react'
+import React, { Component } from 'react'
 
-export default class index extends Component{
-  constructor(props){
+export default class index extends Component {
+  constructor (props) {
     super(props)
+    this.state = {}
   }
 
-  handleArrowClick(option) {
-    this.props.turn(option);
+  handleArrowClick (option) {
+    this.props.turn(option)
   }
 
-  render() {
-    const {direction}=this.props
+  render () {
+    const { direction } = this.props
     return (
       <div>
         {
-          direction ==="row" ?(
+          direction === 'row' ? (
             <div className="slider-arrows-wrap">
               <span
                 className="slider-row slider-row-top"
@@ -30,17 +31,17 @@ export default class index extends Component{
                 &darr;
               </span>
             </div>
-          ):(
+          ) : (
             <div className="slider-arrows-wrap">
               <span
                 className="slider-arrow slider-arrow-left"
                 onClick={this.handleArrowClick.bind(this, -1)}>
-                &lt;
+                  &lt;
               </span>
               <span
                 className="slider-arrow slider-arrow-right"
                 onClick={this.handleArrowClick.bind(this, 1)}>
-                &gt;
+                  &gt;
               </span>
             </div>
           )

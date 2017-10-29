@@ -1,25 +1,30 @@
-export default (() => {
+export default(() => {
   window.$GLOBALCONFIG = {};
-  +function (global) {
+  +(function (global) {
     global.NAVIGATION = [
       {
         id: 1,
         name: '首页',
         url: '/',
-        children: [],
-      },{
+        children: []
+      }, {
         id: 3,
         name: '轮播功能',
-        url: '/carousel',
+        url: '/carousel$/default',
         children: [
           {
             id: 31,
             name: '默认',
             url: '/carousel$/default',
-            children: [],
-          },
-        ],
+            children: []
+          }, {
+            id: 32,
+            name: '初始动效',
+            url: '/carousel$/initCarousel',
+            children: []
+          }
+        ]
       }
     ]
-  }(window.$GLOBALCONFIG)
+  }(window.$GLOBALCONFIG))
 })()

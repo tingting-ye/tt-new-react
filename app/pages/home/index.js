@@ -53,7 +53,7 @@ export default class index extends Component {
           // 如果一级下无二级菜单则提示无链接，返回首页
           if (children.length > 0) {
             this.state.leftMenuArr = children
-            nav.children.map((child) => {
+            nav.children && nav.children.map((child) => {
               if (child.url === url) {
                 params = { topMenu: nav.url, leftMenu: child.url }
               }
@@ -71,6 +71,7 @@ export default class index extends Component {
     })
   }
 
+  // 点击切换头部导航栏
   topMenuClick(e) {
     const navs = global.$GLOBALCONFIG.NAVIGATION || []
     const url = e.key
@@ -83,19 +84,19 @@ export default class index extends Component {
         leftMenu = children[0].url
       }
     })
+    if (leftMenu) {
+      hashHistory.push(leftMenu)
+    } else {
+      hashHistory.push(url)
+    }
     this.setState({
       topMenu: url,
       leftMenu: leftMenu,
       leftMenuArr: leftMenuArr,
-    }, () => {
-      if (leftMenu) {
-        hashHistory.push(leftMenu)
-      } else {
-        hashHistory.push(url)
-      }
     })
   }
 
+  // 点击切换左侧导航栏
   leftMenuClick(e) {
     this.setState({
       leftMenu: e.key
@@ -110,7 +111,7 @@ export default class index extends Component {
     const navs = global.$GLOBALCONFIG.NAVIGATION || []
     return (
       <Layout >
-        <Header className="header">System</Header>
+        <Header className="header">随心旅程 System</Header>
         <div className="topMenu">
           <Menu theme="light" mode="horizontal" style={{ lineHeight: '32px' }}
             selectedKeys={[topMenu]} onClick={this.topMenuClick}

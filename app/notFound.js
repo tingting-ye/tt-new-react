@@ -8,7 +8,7 @@ export default class index extends Component {
 
   render() {
     return (
-      <div>不存在您搜索的链接</div>
+      <div>您搜索的链接不存在</div>
     );
   }
 }

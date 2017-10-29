@@ -9,7 +9,7 @@ export default class index extends Component {
   render() {
     return (
       <div className="page">
-        <div className="page-centent">
+        <div className="page-content">
           Wecome to 随心旅程
         </div>
       </div>
