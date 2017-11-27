@@ -7,7 +7,21 @@ export default(() => {
         name: '首页',
         url: '/',
         children: []
-      }, {
+      }, 
+      {
+        id: 2,
+        name: '单元素动画',
+        url: '/motion$/tweenOne',
+        children: [
+          {
+            id: 21,
+            name: '位移效果',
+            url: '/motion$/tweenOne$/drift',
+            children: []
+          }
+        ]
+      }, 
+      {
         id: 3,
         name: '轮播功能',
         url: '/carousel$/default',
