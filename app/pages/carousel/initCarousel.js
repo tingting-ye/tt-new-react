@@ -27,11 +27,11 @@ export default class index extends Component {
       <div className="page">
         <div className="page-banner">
           {/* prefixCls 自定义样式 */}
-          <BannerAnim prefixCls="" autoPlay>
+          <BannerAnim autoPlay>
             {dataList.map((data, index) =>{
               const url = `url(${data.url})`
               return (
-                <Element prefixCls="" key={index}>
+                <Element key={index}>
                   <BgElement
                     key="bg"
                     className="bg"
@@ -40,10 +40,7 @@ export default class index extends Component {
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                     }}
-                  >
-                    <TweenOne className="" animation={{y: 0, opacity: 0, type: 'from'}}>
-                    </TweenOne>
-                  </BgElement>
+                  />
                 </Element>
               )
             }
