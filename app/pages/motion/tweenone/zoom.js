@@ -7,15 +7,12 @@ export default class Demo extends Component {
     super(props)
     this.state = {}
     this.animation = {
-      left: '100px', // 结束位置
-      top: '100px', // 结束位置
-      yoyo: true, // 重复时执行返回动画
+      yoyo: true,
+      scale: 0,
       repeat: -1, // 重复次数
       duration: 2000, // 动画时间
       opacity: 0.2,//透明度
       backgroundColor: "yellow",
-      width: "100px",
-      height: "100px"
     }
   }
 
@@ -23,10 +20,10 @@ export default class Demo extends Component {
 
   render() {
     return (
-      <div className="tweenOne-drift">
+      <div className="tweenOne-zoom">
         <TweenOne
           animation={this.animation} // 需要执行动画的参数
-          style={{}} // 行内样式
+          style={{ transform: 'scale(1)' }} // 行内样式
           className="code-box-shape" // 自定义样式
           paused={false} // 暂停动画
         // reverse={true} // 倒放动画

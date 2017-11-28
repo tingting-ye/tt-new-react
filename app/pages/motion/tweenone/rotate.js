@@ -23,7 +23,7 @@ export default class Demo extends Component {
 
   render() {
     return (
-      <div className="tweenOne-drift">
+      <div className="tweenOne-rotate">
         <TweenOne
           animation={this.animation} // 需要执行动画的参数
           style={{}} // 行内样式

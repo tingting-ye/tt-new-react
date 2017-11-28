@@ -11,12 +11,24 @@ export default(() => {
       {
         id: 2,
         name: '单元素动画',
-        url: '/motion$/tweenOne',
+        url: '/motion$/tweenOne$/drift',
         children: [
           {
             id: 21,
             name: '位移效果',
             url: '/motion$/tweenOne$/drift',
+            children: []
+          },
+          {
+            id: 22,
+            name: '缩放效果',
+            url: '/motion$/tweenOne$/zoom',
+            children: []
+          },
+          {
+            id: 23,
+            name: '旋转效果',
+            url: '/motion$/tweenOne$/rotate',
             children: []
           }
         ]
