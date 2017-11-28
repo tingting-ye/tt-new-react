@@ -1,34 +1,34 @@
-import React, {Component} from 'react'
-import BannerAnim, {Element} from 'rc-banner-anim'
+import React, { Component } from 'react'
+import BannerAnim, { Element } from 'rc-banner-anim'
 import TweenOne from 'rc-tween-one'
 import 'rc-banner-anim/assets/index.css'
 
 const BgElement = Element.BgElement
 
 export default class index extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       dataList: [
-        {url: '../../img/DSCF8029.jpg'},
-        {url: '../../img/DSCF8075.jpg'},
-        {url: '../../img/DSCF8083.jpg'},
-        {url: '../../img/DSCF8105.jpg'},
-        {url: '../../img/DSCF8108.jpg'}
+        { url: '../../img/DSCF8029.jpg' },
+        { url: '../../img/DSCF8075.jpg' },
+        { url: '../../img/DSCF8083.jpg' },
+        { url: '../../img/DSCF8105.jpg' },
+        { url: '../../img/DSCF8108.jpg' }
       ]
     }
   }
 
-  componentDidMount () {}
+  componentDidMount() { }
 
-  render () {
-    const {dataList} = this.state
+  render() {
+    const { dataList } = this.state
     return (
       <div className="page">
         <div className="page-banner">
           {/* prefixCls 自定义样式 */}
           <BannerAnim autoPlay>
-            {dataList.map((data, index) =>{
+            {dataList.map((data, index) => {
               const url = `url(${data.url})`
               return (
                 <Element key={index}>
@@ -38,7 +38,7 @@ export default class index extends Component {
                     style={{
                       backgroundImage: url,
                       backgroundSize: 'cover',
-                      backgroundPosition: 'center',
+                      backgroundPosition: 'center'
                     }}
                   />
                 </Element>

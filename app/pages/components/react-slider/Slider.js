@@ -1,7 +1,7 @@
 /**
  *  图片轮播组件
  */
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import SliderItem from './SliderItem'
 import SliderArrows from './SliderArrows'
 import SliderDots from './SliderDots'
@@ -62,7 +62,7 @@ export default class Slider extends Component {
     // 获取子集
     const itemNodes = itemArr.map((item, i) => {
       return (
-        <SliderItem data={item} key={'item' + i} sliderIndex={i} count={count} direction={direction} nowLocal={nowLocal} isShowNum={isShowNum}/>
+        <SliderItem data={item} key={'item' + i} sliderIndex={i} count={count} direction={direction} nowLocal={nowLocal} isShowNum={isShowNum} />
       )
     })
 
@@ -75,8 +75,8 @@ export default class Slider extends Component {
         <ul className="sliderItem">
           {itemNodes}
         </ul>
-        {!isArrows || count <= 1 ? null : <SliderArrows turn={this.turn.bind(this)} direction={direction}/>}
-        {!isDots || count <= 1 ? null : <SliderDots turn={this.turn.bind(this)} nowLocal={nowLocal} count={count}/>}
+        {!isArrows || count <= 1 ? null : <SliderArrows turn={this.turn.bind(this)} direction={direction} />}
+        {!isDots || count <= 1 ? null : <SliderDots turn={this.turn.bind(this)} nowLocal={nowLocal} count={count} />}
       </div>
     )
   }

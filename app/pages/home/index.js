@@ -3,41 +3,42 @@ import { Router, Link, hashHistory } from 'react-router'
 import { Layout, Menu, Breadcrumb, Icon, Message } from 'antd'
 const { SubMenu } = Menu
 const { Header, Content, Sider } = Layout
+
 import '../../config'
 
 export default class index extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
-      topMenu: '/', //顶部导航默认值
-      leftMenu: '',//左侧二级导航值
-      leftMenuArr: [],//左侧导航数据集合
+      topMenu: '/', // 顶部导航默认值
+      leftMenu: '', // 左侧二级导航值
+      leftMenuArr: [] // 左侧导航数据集合
     }
     this.topMenuClick = this.topMenuClick.bind(this)
     this.leftMenuClick = this.leftMenuClick.bind(this)
   }
 
-  componentWillMount() {
+  componentWillMount () {
     const url = this.props.location.pathname || '/'
     this.getFirstMenu(url)
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps (nextProps) {
     // if (this.props.location && nextProps.location && this.props.location.pathname != nextProps.location.pathname) {
     //   this.getFirstMenu(nextProps.location.pathname)
     // }
   }
 
   // 获取导航条数据
-  getFirstMenu(url) {
+  getFirstMenu (url) {
     const navs = global.$GLOBALCONFIG.NAVIGATION || []
     this.state.leftMenuArr = []
-    let params = { topMenu: "/", leftMenu: "" }
+    let params = { topMenu: '/', leftMenu: '' }
     navs.map((nav, index) => {
-      let leftMenu = ""
+      let leftMenu = ''
       const children = nav.children
       // 判断链接是否符合一级导航链接条件
-      if (nav.url !== "/" && url.indexOf(nav.url) > -1) {
+      if (nav.url !== '/' && url.indexOf(nav.url) > -1) {
         // 符合
         // 完全一致，则为一级导航
         if (url === nav.url) {
@@ -45,7 +46,7 @@ export default class index extends Component {
             leftMenu = children[0].url
             this.state.leftMenuArr = children
           } else {
-            leftMenu = ""
+            leftMenu = ''
           }
           params = { topMenu: url, leftMenu: leftMenu }
         } else {
@@ -63,19 +64,19 @@ export default class index extends Component {
       }
     })
     this.setState({ topMenu: params.topMenu, leftMenu: params.leftMenu }, () => {
-      if (params.leftMenu && url!==params.leftMenu) {
+      if (params.leftMenu && url !== params.leftMenu) {
         hashHistory.push(params.leftMenu)
-      } else if(url!==params.topMenu){
+      } else if (url !== params.topMenu) {
         hashHistory.push(params.topMenu)
       }
     })
   }
 
   // 点击切换头部导航栏
-  topMenuClick(e) {
+  topMenuClick (e) {
     const navs = global.$GLOBALCONFIG.NAVIGATION || []
     const url = e.key
-    let leftMenu = ""
+    let leftMenu = ''
     let leftMenuArr = []
     navs.map((nav, index) => {
       const children = nav.children
@@ -92,20 +93,20 @@ export default class index extends Component {
     this.setState({
       topMenu: url,
       leftMenu: leftMenu,
-      leftMenuArr: leftMenuArr,
+      leftMenuArr: leftMenuArr
     })
   }
 
   // 点击切换左侧导航栏
-  leftMenuClick(e) {
+  leftMenuClick (e) {
     this.setState({
       leftMenu: e.key
-    },()=>{
+    }, () => {
       hashHistory.push(e.key)
     })
   }
 
-  render() {
+  render () {
     const { children } = this.props
     const { topMenu, leftMenu, leftMenuArr } = this.state
     const navs = global.$GLOBALCONFIG.NAVIGATION || []
@@ -139,12 +140,12 @@ export default class index extends Component {
             ) : null
           }
           <Layout style={{ padding: '10px' }}>
-            <Content className="content" style={{ background: '#fff',padding: '10px'}}>
+            <Content className="content" style={{ background: '#fff', padding: '10px' }}>
               {children}
             </Content>
           </Layout>
         </Layout>
       </Layout >
-    );
+    )
   }
 }
