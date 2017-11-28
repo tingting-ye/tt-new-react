@@ -30,6 +30,12 @@ export default(() => {
             name: '旋转效果',
             url: '/motion$/tweenOne$/rotate',
             children: []
+          },
+          {
+            id: 24,
+            name: '模糊效果',
+            url: '/motion$/tweenOne$/blur',
+            children: []
           }
         ]
       }, 

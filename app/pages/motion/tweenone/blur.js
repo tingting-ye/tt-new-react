@@ -12,7 +12,7 @@ export default class Demo extends Component {
       duration: 2000, // 动画时间
       opacity: 0.2, // 透明度
       backgroundColor: 'yellow',
-      rotateY: 60,
+      blur: '10px'
     }
   }
 
@@ -20,7 +20,7 @@ export default class Demo extends Component {
 
   render () {
     return (
-      <div className="tweenOne-rotate">
+      <div className="tweenOne-blur">
         <TweenOne
           animation={this.animation} // 需要执行动画的参数
           style={{}} // 行内样式
