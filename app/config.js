@@ -36,6 +36,12 @@ export default(() => {
             name: '模糊效果',
             url: '/motion$/tweenOne$/blur',
             children: []
+          },
+          {
+            id: 25,
+            name: '时间轴效果',
+            url: '/motion$/tweenOne$/moreTime',
+            children: []
           }
         ]
       }, 
