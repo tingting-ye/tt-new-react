@@ -2,10 +2,12 @@
 
 body {.flex1;
 	#example {.flex1;
-		.header{color: white;font-size:16px;}
-		.content{.flex1;
-			.page{.flex1;
-				.page-content{.flex1;overflow: auto;}
+		.header{color: white; font-size:16px;}
+		.content{.flex1; overflow-y:auto;
+			&::-webkit-scrollbar{overflow: hidden;}
+			&::-webkit-scrollbar-thumb {overflow: hidden;}
+			.page{ .flex1;
+				.page-content{.flex1; overflow: auto;}
 			}
 		}
 	}

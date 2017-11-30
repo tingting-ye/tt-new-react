@@ -42,6 +42,12 @@ export default(() => {
             name: '时间轴效果',
             url: '/motion$/tweenOne$/moreTime',
             children: []
+          },
+          {
+            id: 26,
+            name: '变更动画效果',
+            url: '/motion$/tweenOne$/changeState',
+            children: []
           }
         ]
       }, 
