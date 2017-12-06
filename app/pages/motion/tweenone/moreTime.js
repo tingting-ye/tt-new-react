@@ -16,14 +16,14 @@ export default class Demo extends Component {
       { scale: 1 },
       { blur: "0px" },
       { left: "0%" },
-      { top:"50px" },
+      { top: "50px" },
     ]
     this.play = this.play.bind(this)
   }
 
   componentDidMount() { }
 
-  play() { this.setState({ moment: 0 }) }
+  play() { this.setState({ moment: 0 }, () => this.setState({ moment: null })) }
 
   render() {
     return (

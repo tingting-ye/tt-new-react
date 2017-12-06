@@ -48,6 +48,12 @@ export default(() => {
             name: '变更动画效果',
             url: '/motion$/tweenOne$/changeState',
             children: []
+          },
+          {
+            id: 27,
+            name: 'svg 线性动画',
+            url: '/motion$/tweenOne$/svgLine',
+            children: []
           }
         ]
       }, 
