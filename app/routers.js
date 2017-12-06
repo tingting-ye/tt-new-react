@@ -4,7 +4,7 @@ import Home from './pages/home/index'
 import Welcome from './pages/welcome'
 import notFound from './notFound'
 import { defaultCarousel, initCarousel } from './pages/carousel'
-import { drift, zoom, rotate, blur, moreTime, changeState,svgLine } from './pages/motion'
+import { drift, zoom, rotate, blur, moreTime, changeState, svgLine, svgDeformation } from './pages/motion'
 const routers = (
   <Route>
     <Route path="/" component={Home}>
@@ -21,6 +21,7 @@ const routers = (
       <Route path="/motion$/tweenOne$/moreTime" component={moreTime} />
       <Route path="/motion$/tweenOne$/changeState" component={changeState} />
       <Route path="/motion$/tweenOne$/svgLine" component={svgLine} />
+      <Route path="/motion$/tweenOne$/svgDeformation" component={svgDeformation} />
       {/* 无匹配页面 */}
       <Route path="*" component={notFound} />
     </Route>

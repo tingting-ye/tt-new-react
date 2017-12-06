@@ -54,6 +54,12 @@ export default(() => {
             name: 'svg 线性动画',
             url: '/motion$/tweenOne$/svgLine',
             children: []
+          },
+          {
+            id: 28,
+            name: 'svg 形变动画',
+            url: '/motion$/tweenOne$/svgDeformation',
+            children: []
           }
         ]
       }, 
