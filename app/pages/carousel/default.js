@@ -22,18 +22,16 @@ export default class index extends Component {
       // 是否显示底部切换点(不传默认为true) isDots:false
       // 鼠标放置是否继续播放(不传默认为true) isPause:false,
       // 轮播等待时间(默认两秒) waiting:10, 每次显示个数
-      isShowNum: 1,
+      isShowNum: 2,
       // 横向还是纵向(默认横向"column")
-      direction: 'column'
+      direction: 'row'
     }
   }
 
   render() {
     const sliderItemArr = this.state.item.map((obj, i) => {
       return (
-        <div>
-          <img src={obj.url} />
-        </div>
+        <div><img src={obj.url} /></div>
       )
     })
     return (

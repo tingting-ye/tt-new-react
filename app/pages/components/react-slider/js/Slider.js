@@ -47,8 +47,7 @@ export default class Slider extends Component {
     const isDots = this.props.isDots === undefined || this.props.isDots // 是否显示底部切换点
     const nowLocal = this.state.nowLocal
     const isShowNum = this.props.isShowNum || 1  // 当前banner显示几个li
-    let itemArr = this.props.sliderItemArr.concat(this.props.sliderItemArr.slice(0, isShowNum - 1))
-    // 获取子集
+    let itemArr = this.props.sliderItemArr.concat(this.props.sliderItemArr.slice(0, isShowNum - 1)) // 获取子集数据
     const width = direction === 'column' ? (100 / isShowNum + '%') : '100%'
     const height = direction === 'column' ? '100%' : (100 / isShowNum + '%')
     const compareArr = []
@@ -77,7 +76,7 @@ export default class Slider extends Component {
           {itemNodes ? itemNodes : "请自行编辑内容"}
         </ul>
         {!isArrows || count <= 1 ? null : <SliderArrows turn={this.turn.bind(this)} direction={direction} />}
-        {!isDots || count <= 1 ? null : <SliderDots turn={this.turn.bind(this)} nowLocal={nowLocal} count={count} />}
+        {!isDots || count <= 1? null : <SliderDots turn={this.turn.bind(this)} nowLocal={nowLocal} count={count} />}
       </div>
     )
   }
