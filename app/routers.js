@@ -5,15 +5,14 @@ import Welcome from './pages/welcome'
 import notFound from './notFound'
 import { defaultCarousel, initCarousel } from './pages/carousel'
 import { drift, zoom, rotate, blur, moreTime, changeState, svgLine, svgDeformation } from './pages/motion'
-import { defaultText } from './pages/text'
+import { defaultText,propTypesText } from './pages/text'
 const routers = (
   <Route>
     <Route path="/" component={Home}>
       <IndexRoute component={Welcome} />
-
-      {/* 轮播图 */}
-      <Route path="/carousel$/default" component={defaultCarousel} />
-      <Route path="/carousel$/initCarousel" component={initCarousel} />
+      {/* 数据测试 */}
+      <Route path="/text$/default" component={defaultText} />
+      <Route path="/text$/propTypes" component={propTypesText} />
       {/* 单元素动画 */}
       <Route path="/motion$/tweenOne$/drift" component={drift} />
       <Route path="/motion$/tweenOne$/zoom" component={zoom} />
@@ -23,9 +22,9 @@ const routers = (
       <Route path="/motion$/tweenOne$/changeState" component={changeState} />
       <Route path="/motion$/tweenOne$/svgLine" component={svgLine} />
       <Route path="/motion$/tweenOne$/svgDeformation" component={svgDeformation} />
-      {/* 数据测试 */}
-      <Route path="/text$/default" component={defaultText} />
-
+      {/* 轮播图 */}
+      <Route path="/carousel$/default" component={defaultCarousel} />
+      <Route path="/carousel$/initCarousel" component={initCarousel} />
       {/* 无匹配页面 */}
       <Route path="*" component={notFound} />
     </Route>

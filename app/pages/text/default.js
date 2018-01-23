@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Slider from '../components/react-slider/js/Slider'
 
 export default class index extends Component {
   constructor(props) {
@@ -51,8 +50,8 @@ export default class index extends Component {
     console.log(arr)
     return (
       <div>
-        通过this.state.list.filter((item)=>item.status==="")的方法可以迅速遍历出对应status的数据
-        <p>详情可参照代码</p>
+        <p>通过this.state.list.filter((item)=>item.status==="")的方法可以迅速遍历出对应status的数据</p>
+        <p>(详情可参照代码)</p>
       </div>
     )
   }
