@@ -80,6 +80,19 @@ export default(() => {
             children: []
           }
         ]
+      }, 
+      {
+        id: 4,
+        name: '数据',
+        url: '/text$/default',
+        children: [
+          {
+            id: 31,
+            name: '默认',
+            url: '/text$/default',
+            children: []
+          }
+        ]
       }
     ]
   }(window.$GLOBALCONFIG))
