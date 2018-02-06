@@ -6,6 +6,7 @@ import notFound from './notFound'
 import { defaultCarousel, initCarousel } from './pages/carousel'
 import { drift, zoom, rotate, blur, moreTime, changeState, svgLine, svgDeformation } from './pages/motion'
 import { defaultText,propTypesText } from './pages/text'
+import { defaultLifecycle } from './pages/lifecycle'
 const routers = (
   <Route>
     <Route path="/" component={Home}>
@@ -13,6 +14,8 @@ const routers = (
       {/* 数据测试 */}
       <Route path="/text$/default" component={defaultText} />
       <Route path="/text$/propTypes" component={propTypesText} />
+      {/* 生命周期 */}
+      <Route path="/lifecycle$/default" component={defaultLifecycle} />
       {/* 单元素动画 */}
       <Route path="/motion$/tweenOne$/drift" component={drift} />
       <Route path="/motion$/tweenOne$/zoom" component={zoom} />

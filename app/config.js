@@ -10,17 +10,23 @@ export default(() => {
       }, 
       {
         id: 2,
+        name: '生命周期',
+        url: '/lifecycle$/default',
+        children: []
+      }, 
+      {
+        id: 3,
         name: '数据测试',
         url: '/text$/default',
         children: [
           {
-            id: 21,
+            id: 31,
             name: '默认',
             url: '/text$/default',
             children: []
           },
           {
-            id: 22,
+            id: 32,
             name: 'propTypes校验器',
             url: '/text$/propTypes',
             children: []
@@ -28,54 +34,54 @@ export default(() => {
         ]
       },
       {
-        id: 3,
+        id: 4,
         name: '单元素动画',
         url: '/motion$/tweenOne$/drift',
         children: [
           {
-            id: 31,
+            id: 41,
             name: '位移效果',
             url: '/motion$/tweenOne$/drift',
             children: []
           },
           {
-            id: 32,
+            id: 42,
             name: '缩放效果',
             url: '/motion$/tweenOne$/zoom',
             children: []
           },
           {
-            id: 33,
+            id: 43,
             name: '旋转效果',
             url: '/motion$/tweenOne$/rotate',
             children: []
           },
           {
-            id: 34,
+            id: 44,
             name: '模糊效果',
             url: '/motion$/tweenOne$/blur',
             children: []
           },
           {
-            id: 35,
+            id: 45,
             name: '时间轴效果',
             url: '/motion$/tweenOne$/moreTime',
             children: []
           },
           {
-            id: 36,
+            id: 46,
             name: '变更动画效果',
             url: '/motion$/tweenOne$/changeState',
             children: []
           },
           {
-            id: 37,
+            id: 47,
             name: 'svg 线性动画',
             url: '/motion$/tweenOne$/svgLine',
             children: []
           },
           {
-            id: 38,
+            id: 48,
             name: 'svg 形变动画',
             url: '/motion$/tweenOne$/svgDeformation',
             children: []
@@ -83,17 +89,17 @@ export default(() => {
         ]
       }, 
       {
-        id: 4,
+        id: 5,
         name: '轮播功能',
         url: '/carousel$/default',
         children: [
           {
-            id: 41,
+            id: 51,
             name: '默认',
             url: '/carousel$/default',
             children: []
           }, {
-            id: 42,
+            id: 52,
             name: '初始动效',
             url: '/carousel$/initCarousel',
             children: []
