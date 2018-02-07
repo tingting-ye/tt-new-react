@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import 'whatwg-fetch'
 import {Router, hashHistory} from 'react-router'
 import 'antd/dist/antd.css'
 import './style/index.less'

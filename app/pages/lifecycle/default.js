@@ -1,5 +1,3 @@
-
-// import 'whatwg-fetch'
 import React, { Component } from 'react'
 
 export default class index extends Component {
@@ -15,14 +13,14 @@ export default class index extends Component {
   }
 
   getJsonList() {
-    // fetch('/public/text.json')
-    //   .then(function (response) {
-    //     return response.json()
-    //   }).then(function (json) {
-    //     console.log('parsed json', json)
-    //   }).catch(function (ex) {
-    //     console.log('parsing failed', ex)
-    //   })
+    fetch('/public/text.json')
+      .then(function (response) {
+        return response.json()
+      }).then(function (json) {
+        console.log('parsed json', json)
+      }).catch(function (ex) {
+        console.log('parsing failed', ex)
+      })
   }
 
   render() {
