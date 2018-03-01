@@ -7,6 +7,7 @@ import { defaultCarousel, initCarousel } from './pages/carousel'
 import { drift, zoom, rotate, blur, moreTime, changeState, svgLine, svgDeformation } from './pages/motion'
 import { defaultText,propTypesText } from './pages/text'
 import { defaultLifecycle } from './pages/lifecycle'
+import { defaultIinteractive } from './pages/interactive'
 const routers = (
   <Route>
     <Route path="/" component={Home}>
@@ -16,6 +17,8 @@ const routers = (
       <Route path="/text$/propTypes" component={propTypesText} />
       {/* 生命周期 */}
       <Route path="/lifecycle$/default" component={defaultLifecycle} />
+      {/* 交互动画 */}
+      <Route path="/interactive$/default" component={defaultIinteractive} />
       {/* 单元素动画 */}
       <Route path="/motion$/tweenOne$/drift" component={drift} />
       <Route path="/motion$/tweenOne$/zoom" component={zoom} />

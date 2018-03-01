@@ -106,6 +106,12 @@ export default(() => {
           }
         ]
       }, 
+      {
+        id: 6,
+        name: '交互效果',
+        url: '/interactive$/default',
+        children: []
+      }, 
     ]
   }(window.$GLOBALCONFIG))
 })()

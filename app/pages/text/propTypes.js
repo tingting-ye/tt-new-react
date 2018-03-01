@@ -9,7 +9,7 @@ export default class index extends Component {
     this.button = this.button.bind(this)
   }
 
-  button(){
+  button() {
     alert("error")
   }
 
@@ -17,12 +17,14 @@ export default class index extends Component {
     return (
       <div>
         <h1>PropsTypes校验器</h1>
-        <Sence 
+        <Sence
           button={this.button}
           name={"ytt"}
           age={12}
           sex={false}
-          intersting={[1,2,3,4]}
+          intersting={[1, 2, 3, 4]}
+          objectData={{ dizhi: "杭州", shenghui: "杭州", chusheng: 1991 }}
+          title={"fdsdhf"}
         />
       </div>
     )

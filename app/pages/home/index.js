@@ -24,6 +24,8 @@ export default class index extends Component {
   }
 
   componentWillReceiveProps (nextProps) {
+    console.log(window.location)
+    console.log(window.location.hash.substr(1))
     // if (this.props.location && nextProps.location && this.props.location.pathname != nextProps.location.pathname) {
     //   this.getFirstMenu(nextProps.location.pathname)
     // }

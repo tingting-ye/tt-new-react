@@ -6,6 +6,18 @@ export default class index extends Component {
     this.state = {}
   }
 
+  componentWillMount(){
+    // 离开当前页面时，弹出啊确认
+    // this.props.router.setRouteLeaveHook(
+    //   this.props.route,
+    //   this.routerLeaveInformation
+    // )
+  }
+
+  // routerLeaveInformation(){
+  //   return "you sure you want to leave this page?"
+  // }
+
   render() {
     return (
       <div className="page">
