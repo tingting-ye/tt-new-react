@@ -3,9 +3,9 @@ import { Route, IndexRoute, Redirect } from 'react-router'
 import Home from './pages/home/index'
 import Welcome from './pages/welcome'
 import notFound from './notFound'
-import { defaultCarousel, initCarousel } from './pages/carousel'
+import { defaultCarousel, initCarousel, slickCarousel } from './pages/carousel'
 import { drift, zoom, rotate, blur, moreTime, changeState, svgLine, svgDeformation } from './pages/motion'
-import { defaultText,propTypesText } from './pages/text'
+import { defaultText, propTypesText } from './pages/text'
 import { defaultLifecycle } from './pages/lifecycle'
 import { defaultIinteractive } from './pages/interactive'
 const routers = (
@@ -31,6 +31,7 @@ const routers = (
       {/* 轮播图 */}
       <Route path="/carousel$/default" component={defaultCarousel} />
       <Route path="/carousel$/initCarousel" component={initCarousel} />
+      <Route path="/carousel$/slickCarousel" component={slickCarousel} />
       {/* 无匹配页面 */}
       <Route path="*" component={notFound} />
     </Route>

@@ -103,6 +103,11 @@ export default(() => {
             name: '初始动效',
             url: '/carousel$/initCarousel',
             children: []
+          }, {
+            id: 52,
+            name: 'reactSlick',
+            url: '/carousel$/slickCarousel',
+            children: []
           }
         ]
       }, 

@@ -28,7 +28,7 @@ module.exports = {
         loader: 'style-loader!css-loader'//添加对样式表的处理
       },
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(svg|gif|png|eot|woff|ttf|jpg)$/,
         loader: 'url-loader?limit=819200'
       },
       {
